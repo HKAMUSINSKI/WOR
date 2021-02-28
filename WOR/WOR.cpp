@@ -53,7 +53,7 @@ public:
 
     Robot(uint8_t size = 100) : poemSize(size)
     {
-        srand(std::time(NULL));
+       srand(std::time(NULL));
     }
 
     void createPoem()
@@ -63,6 +63,7 @@ public:
         {
             currentPoem.push_back((char)(rand() % 75 + 48));
         }
+               
     }
 
     void readPaper(std::unique_ptr<Paper> poem)
@@ -154,7 +155,7 @@ int main()
         {
            
             mechanic2.getPaper();
-            if (i % 5 == 1) { std::cout << " I am second robot " << std::endl; mechanic2.insertPaper(); robot_ptr->recitePoem(); }
+            if (i % 5 == 1) { std::cout << " I am second robot " << std::endl; mechanic2.insertPaper(); robot_ptr2->recitePoem(); }
         }
         if (i % 10 == 1)
         {
